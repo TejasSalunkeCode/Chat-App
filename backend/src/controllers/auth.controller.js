@@ -1,7 +1,9 @@
+import cloudinary from "../lib/cloudinary.js";
 import { connectDB } from "../lib/db.js";
 import { generateToken } from "../lib/utils.js";
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
+
 
 export const signup=async(req,res)=>{
     await connectDB()
@@ -102,6 +104,7 @@ try {
     }
 
     const uploadResponse=await cloudinary.uploader.upload(profilePic);
+    console.log(uploadResponse)
 
     const upadetdUser=await User.findByIdAndUpdate(userId,{profilePic:uploadResponse.secure_url},{new:true})
 
@@ -109,7 +112,7 @@ try {
 
 } catch (error) {
     console.log("Error in update Profile",error);
-    req.status(500).json({message:"Internal Server Error"});
+    res.status(500).json({message:"Internal Server Error"});
 }
 };
 
