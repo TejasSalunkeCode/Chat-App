@@ -23,7 +23,7 @@ app.use(cors({
     credentials:true,
 }))
 
-app.use("/api/message",messageRoutes)
+app.use("/api/messages",messageRoutes)
 app.use("/api/auth",authRoute)
 
 app.listen(PORT,()=>{

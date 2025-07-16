@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {MessageSquare} from "lucide-react";
 export const NoChatSelected = () => {
   return (
     <div className="w-full flex flex-1 flex-col items-center justify-center p-16 bg-base-100/50">
@@ -12,6 +12,7 @@ export const NoChatSelected = () => {
              justify-center animate-bounce"
             >
               <MessageSquare className="w-8 h-8 text-primary " />
+
               
             </div>
           </div>
