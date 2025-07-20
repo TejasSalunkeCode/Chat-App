@@ -104,7 +104,7 @@ try {
     }
 
     const uploadResponse=await cloudinary.uploader.upload(profilePic);
-    console.log(uploadResponse)
+    // console.log(uploadResponse)
 
     const upadetdUser=await User.findByIdAndUpdate(userId,{profilePic:uploadResponse.secure_url},{new:true})
 

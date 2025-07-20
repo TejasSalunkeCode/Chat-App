@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 
 export const protectRoute = async (req, res, next) => {
-    console.log("ll",req);
+    // console.log("ll",req);
     
     try {
         const token = req.cookies.jwt;
@@ -13,13 +13,13 @@ export const protectRoute = async (req, res, next) => {
             return res.status(401).json({ message: "Unauthorized - No Token Provided" })
         }
         
-        console.log("hi");
+        // console.log("hi");
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         
         if (!decoded) {
             return res.status(401).json({ message: "Unauthorized - No Token Provided" })
         }
-                console.log("hijj");
+                // console.log("hijj");
 
         const user = await User.findById(decoded.userId).select("-password");
 
