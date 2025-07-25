@@ -1,5 +1,26 @@
 {
   "dependencies": {
     "cors": "^2.8.5"
-  }
+  },
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build":"",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TejasSalunkeCode/Chat-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TejasSalunkeCode/Chat-App/issues"
+  },
+  "homepage": "https://github.com/TejasSalunkeCode/Chat-App#readme"
 }
